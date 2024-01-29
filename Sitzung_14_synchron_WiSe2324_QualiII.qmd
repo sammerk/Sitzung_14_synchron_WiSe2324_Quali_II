@@ -1,0 +1,289 @@
+---
+title: "Vorlesung"
+subtitle: "Einführung in qualitative und quantitative Forschungsmethoden"
+author: "Samuel Merk"
+format: 
+  revealjs:
+    auto-stretch: false
+    self-contained: true
+    slide-number: false
+    preview-links: false
+    pdf-separate-fragments: true
+    controls: true
+    logo: img/PHlogo.svg
+    theme: [simple, css/custom.scss]
+    fullscreen: true
+    pdfexport: true
+bibliography: references.bib
+csl: apa.csl
+---
+## Heutige Sitzung {.center .smaller}
+* Probeklausur
+    * Übersicht über Bedienung
+    * Fragen
+* Qualitative Forschungsmethoden
+    * Beispiel 2: »Die Arbeitslosen von Marienthal«
+    * Typische Datenerhebungsmethoden
+    * Typische Auswertungsmethoden
+
+```{r hidden chunk which creates template stuff}
+#| echo: false
+
+## in terminal ########
+# quarto install extension quarto-ext/fontawesome
+# quarto install extension schochastics/academicons
+#
+
+########################
+library(fontawesome)
+library(tidyverse)
+
+# Change css to lecker PH green
+if(!dir.exists("img"))
+dir.create("img")
+if(!dir.exists("css"))
+dir.create("css")
+fileConn<-file("css/custom.scss")
+writeLines(c("/*-- scss:defaults --*/",
+             "$link-color: #8cd000 !default;"), fileConn)
+close(fileConn)
+
+# create sash with URL
+sash <- 
+  ggplot() + 
+  geom_polygon(data = tibble(x = c(0,4,5.5,0),
+                             y = c(1,5,5,-.5)),
+               aes(x,y), fill = "#8cd000") + 
+  coord_fixed() +
+  annotate(geom = "text", 
+           label = " ", 
+           x = .8, y = .8, 
+           angle = 45,
+           hjust = 0, vjust = 0,
+           size = 10,
+           color = "white") +
+ theme_void() + 
+ theme(plot.margin = margin(-2,0,0,-12, unit = "cm"))
+ggsave("img/sash.svg", sash)
+```
+
+```{css}
+.callout-title {background-color: #8cd000 !important;}
+
+.imp {
+  color: #8cd000;
+}
+
+.em08{
+  font-size: .8em;
+}
+.em07{
+  font-size: .7em;
+}
+
+.em15{
+  font-size: 1.5em;
+}
+
+
+figure>figcaption {
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.citation {
+  font-size: .8em;
+  color: #8cd000;
+}
+
+
+.timevis.html-widget .vis-background .vis-minor.vis-odd {
+  background: #8CD00030;
+  }
+  
+.vis-text {
+  color: #ffffff !important;
+  }
+  
+.vis-timeline {
+  border: transparent;
+  }
+  
+.vis-item {
+  border-color: #8CD000; 
+  background-color: #8CD000; 
+  color: #ffffff !important;
+}
+
+
+
+.vis-current-time {
+  background-color: #8CD00000;
+}
+  
+```
+
+# Probeklausur
+
+# Die Arbeitslosen von Marienthal
+## Die Arbeitslosen von Marienthal {.smaller}
+
+:::: {.columns}
+
+::: {.column width='80%'}
+> "*Ziel der vorliegenden Untersuchung war mit den Mitteln moderner Erhebungsmethode ein Bild von der psychologischen Situation eines Arbeitslosen Ortes zu geben. Es waren uns von Anfang an zwei Aufgaben wichtig. Die inhaltliche: zum Problem der Arbeitslosigkeit Material beizutragen - und die methodische: zu versuchen, eine sozialpsychologischen Tatbestand umfassend objektiv darzustellen."* [@jahoda2021]
+:::
+
+::: {.column width='20%'}
+![](img/cover_marienthal.jpeg){}
+:::
+
+::::
+
+
+
+::: {.notes}
+* Es gab 1930 nur zwei Datenquellen, amtliche Statistiken udn SOzialreportagen
+* Zwischen den nackten Ziffern der offiziellen Statistik und den allen Zufällen ausgesetzten Eindrücken des sozialen Reportage kraft eine Lücke. Die auszufüllen Sinn unseres Versuchs ist, was uns forschte, war eine Methode der Darstellung, die die Verwendung exakten Zahlenmaterials, mit dem sich Einleben in die Situation verband.
+
+* Erste Auflage musste ohne Namensnennung der Autor:innen auskommen, aber auch das reichte nicht. Die Nazis verboten das später ganz.
+:::
+
+## Erhebungsdesign {.smaller}
+
+::: {style="font-size: 75%;"}
+|  | Quantitative Daten | Qualitative Daten |
+| ----: | :---: | :---: |
+| Sekundäranalyse | Bevölkerungsstatistik <br> Wahlstatistik <br> Beschwerden bei Behörden |  |
+| Standardisierte <br> Daten | Haushaltsinventarlisten <br> Zeitverwendungsbögen |  |
+| Dokumenten- <br> analyse | Bibliotheksbesuche <br> Zeitungsabonnements <br> Vereinsmitglieder | Tagebücher <br> Schulaufsätze <br> Preisausschreiben |
+| (Teilnehmende) <br> Beobachtung | Messung der Gehgeschwindigkeit | Kleidersammlung <br> Ärztesprechstunden <br> Erziehungsberatung <br> Turn- und Schnittzeichenkurse |
+| Experten- <br> interviews |  | Lehrer, Pfarrer, Bürgermeister, <br> Ärzte, Geschäftsleute, <br> Vereinsfunktionäre |
+| Narrative <br> Interviews |  | Arbeitslose |
+:::
+
+## Ausgewählte zentrale Daten
+#### Quantitative Daten aus Dokumentenanalyse
+- Anzahl der entliehenen Bücher sinkt von 1929 bis 1931 um knapp die Hälfte
+- Zahl der Mitglieder im Turn- bzw. Gesangsverein sinkt von 1927 bis 1931 um mehr als die Hälfte
+- Zahl der Abonnenten der „Arbeiterzeitung" sinkt von 1927 bis 1930 um 60 Prozent gesunken, der Mitglieder der Sozialdemokratischen Partei um ein Drittel
+
+## Ausgewählte zentrale Daten {.smaller}
+#### Interviewtranskripte
+*"Immer wieder verschwinden Katzen. Die Katze von Herrn H. ist erst vor wenigen Tagen verschwunden. Katzenfleisch ist sehr gut. Auch Hunde werden gegessen. [...] Erst vor wenigen Tagen bekam ein Mann von einem Bauern einen Hund geschenkt, unter der Bedingung, daß er ihn schmerzlos erschlägt."*
+
+#### Gehgeschwindigkeit und Häufigkeit des Stehenbleibens auf Dorfstraße
+
+|  | Männer | Frauen |
+| :--- | :---: | :---: |
+| 3x und mehr | 39 | 3 |
+| 2x | 7 | 2 |
+| 1x | 16 | 15 |
+| 0x | 6 | 12 |
+
+## Zentrales Ergebnis: Typologie {.smaller}
+::: {style="font-size: .95em;"}
+**Die Resignierten** (48%)   
+*"Das gleichmütig erwartungslose Dahinleben, die Einstellung: man kann ja doch nichts gegen die Arbeitslosigkeit machen, dabei eine relativ ruhige Stimmung, sogar immer wieder auftauchende heitere Augenblicksfreude, verbunden mit dem Verzicht auf eine Zukunft, die nicht einmal mehr in der Phantasie als Plan eine Rolle spielt [...]"* (S. 70)
+
+**Die Ungebrochenen** (16%)
+*"Ihre Haushaltungsführung ist ebenso geordnet wie die der Resignierten, aber ihre Bedürfnisse sind weniger reduziert, ihr Horizont ist weiter, ihre Energie größer."* (S. 71)
+
+**Die Verzweifelten** (11%)
+*"Diese Menschen sind völlig verzweifelt, und nach dieser Grundstimmung erhielt die Verhaltensgruppe ihren Namen. Wie die Ungebrochenen und Resignierten halten auch sie in ihrem Haushalt noch Ordnung, pflegen auch sie ihre Kinder."* (S. 71)
+
+**Die Apathischen** (2%)
+*"Mit apathischer Indolenz läßt man den Dingen ihren Lauf, ohne den Versuch zu machen, etwas vor dem Verfall zu retten. [...] Das Hauptkriterium für diese Haltung ist das energielose, tatenlose Zusehen. Wohnung und Kinder sind unsauber und ungepflegt, die Stimmung ist nicht verzweifelt, sondern indolent."* (S. 71f.)
+:::
+
+
+# Typische Datenerhebungsmethoden
+## Interviews
+Typischerweise werden unterschieden:
+
+* Biografisch-narrative Interview
+* Leitfadeninterview
+* Expert:inneninterviews
+
+## Biografisch-narrative Interviews [@merk2024]
+* Geringer Grad an Fremdstrukturierung
+* Biograf*innen werden mittels einer sehr offenen und allgemeinen Erzählaufforderung zu einer Stehgreiferzählung ihrer Lebensgeschichte angeregt. Dabei intervenieren Forschende nicht, *»bringen lediglich gesprächsaufrechterhaltene Rezeptionssignale (bspw. mhm) ein«*
+* Nach der Haupterzählung können sowohl immanente wie exmanente Nachfragen gestellt werden.
+
+## Leitfadeninterviews
+* Wesentlich stärker strukturiert [@friebertshaeuser2013a], da sowohl Vorgaben für Gesprächssituation als auch für den Antworthorizont gemacht werden
+* Leitfäden werden auf der Basis bereits bestehender fundierter empirischer und theoretischer Erkenntnisse erstellt
+* Offenere Fragen werden zumeist zuerst gestellt
+
+## Expert:inneninterviews
+* Meist Spezialform des Leitfadeninterviews
+* Besonderheit in der Stichprobe
+
+## Gruppendiskussionen [@bohnsack2014]
+* Keine Interviewform, eher Moderationstechnik
+* Ziel ist es meist »kollektive Orientierungsrahmen« oder »konjunktives Wissen« zu manifestieren
+* Oft wird mit einem Diskussionsstimulus (These, Bild, Filmausschnitt) gearbeitet
+* Forschende Person leitet die Diskussion und hält den Diskurs aufrecht
+
+## Delphimethode [@haeder2000]
+* Ursprünglich für die Vorhersage von Entwicklungen in Wissenschaft, Wirtschaft oder Politik entwickelt
+* Zunächst offene Frage an mehrere voneinander unabhängige Experten (z.B. »Wie muss sich Lehrer:innenbildung angesicht generativer KI ändern?«)
+* Kategorisierung von Antworten. Alle Expert:innen lesen alle Antworten
+* Ergänzung der bisherigen offenen Antworten durch Expert:innen
+* Kategorisierung aller Antworten
+* Expert:innen bewerten Relevanz der Kategorien
+
+## Teilnehmende Beobachtung
+* *»zielt darauf ab, soziale Situationen, Personen und Institutionen in ihren Alltagskontexten zu erforschen«* [@merk2024]
+* Das angestrebte Ideal ist, als Forscher:in eine Situation »von innen heraus« zu erleben und an dieser teilzuhaben
+* Dabei wird die Distanz zum Feld bewusst temporär aufgegeben
+* Datenerhebung findet oftmals in Form von stark verdichteten Feldnotizen statt
+
+## Indirekte Beobachtung
+* Wenn es zu **keinem Kontakt zwischen Forschenden und Merkmalsträgern** kommt, spricht man von indirekter Beobachtung (z.B. Logdaten, Drohnenbilder)
+* Digitalisierung und Datafizierung fördern das Potential indirekter Beobachtungen
+* Oftmals ist die Forschungsethik problematisch
+
+
+# Typische Auswertungsmethoden
+## Typische Auswertungsmethoden {.smaller}
+Die Vielfalt qualitativer Auswertungsmethoden ist schier unüberschaubar und die meisten Autor:innen sind sich einig, dass wenig Einigkeit bzgl. deren Vor- und Nachteile sowie sogar der allgemein anzuwenden Gütekriterien herrscht [@struebing2018].
+
+Grob können die Auswertungsmethoden jedoch nach 
+* der angestrebt zu rekonstruierenden **Sinnebene** klassifiziert werden. Also in Rekonstruktionen
+    * des subjektiven Sinns,
+    * des sozialen Sinns und 
+    * des objektiven Sinns
+* sowie nach der **Analyseeinheit** in 
+    * in kategorienbasierte und 
+    * sequenzanalytische Verfahren
+
+## Inhaltsanalyse {.smaller}
+* Die Inhaltsanalyse ist ein klassisches und weit verbreitetes **kategorienbasiertes** qualitatives Datenanalyseverfahren
+* Ziel ist eine zusammenfassende inhaltliche Darstellung von textlichem Material (z.B. Interviewtranskipte)
+* Dazu werden Textstellen Kategorien zugeordnet
+* Diese Kategorien sind können 
+    * vor der Datenerhebung bereits gegeben sein (**deduktive Inhaltsanalyse**),
+    * in den Kategorien identifiziert werden (**induktive Inhaltsanalyse**) oder
+    * teilweise bereits vor der Datenerhebung gegeben sein aber während der Datenerhebung ergänzt werden (**deduktiv-induktive Inhaltsanalyse**)
+* Die verbreitetesten Verfahren sind die Inhaltsanalyse nach Mayring [@mayring2022] und Kuchartz [@kuckartz2022]
+* Diese Verfahren machen detaillierte Vorschläge zur praktischen Vorgehensweise
+
+## Grounded Theory [@struebing2008] {.smaller}
+* In der Grounded Theory findet **Datenerhebung, Datenauswertung und Theoriebildung reziprok und wiederholt** statt; jeder dieser Schritte kann also mehrfach durchgeführt werden und jedem der Schritt kann jeder andere folgen
+* Während der Analyse gesammelte theoretische Ideen werden der übder den gesamten Forschungsprozess als Memos festgehalten und dokumentieren so die sukzessive Theoretisierung. 
+* Für die Auswahl der nach einem Theoretisierungsschritt als nächstes zu erhebende Daten werden typischerweise **minimale oder maximale Kontrastierungen** gewählt
+* In der Grounded Theory werden verschiedene Kodiertechniken eingesetzt (das offene Kodieren, das axiale Kodieren und das selektive Kodieren)
+* Die Grouded Theory stellt für viele Autoren eine Paradebeispiel abduktiven Arbeitens ("empirisch begründete Theoriebildung") in den Sozialwissenschaften dar
+
+:::{.callout-warning collapse=false appearance='default' icon=false}
+## Achtung:
+Der Gesamtprozess ist so komplex, dass er sich nur in sehr seltenen Fällen für Qualifikationsarbeiten eignet
+:::
+
+
+
+## Literatur {.smaller}
+<style>
+div.callout {border-left-color: #8cd000 !important;
+</style>
