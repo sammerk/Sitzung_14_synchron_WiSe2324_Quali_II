@@ -166,7 +166,7 @@ figure>figcaption {
 #### Quantitative Daten aus Dokumentenanalyse
 - Anzahl der entliehenen Bücher sinkt von 1929 bis 1931 um knapp die Hälfte
 - Zahl der Mitglieder im Turn- bzw. Gesangsverein sinkt von 1927 bis 1931 um mehr als die Hälfte
-- Zahl der Abonnenten der „Arbeiterzeitung" sinkt von 1927 bis 1930 um 60 Prozent gesunken, der Mitglieder der Sozialdemokratischen Partei um ein Drittel
+- Zahl der Abonnenten der „Arbeiterzeitung" sinkt von 1927 bis 1930 um 60 Prozent, die der Mitglieder der Sozialdemokratischen Partei um ein Drittel
 
 ## Ausgewählte zentrale Daten {.smaller}
 #### Interviewtranskripte
@@ -201,13 +201,13 @@ figure>figcaption {
 ## Interviews
 Typischerweise werden unterschieden:
 
-* Biografisch-narrative Interview
-* Leitfadeninterview
+* Biografisch-narrative Interviews
+* Leitfadeninterviews
 * Expert:inneninterviews
 
-## Biografisch-narrative Interviews [@merk2024]
-* Geringer Grad an Fremdstrukturierung
-* Biograf*innen werden mittels einer sehr offenen und allgemeinen Erzählaufforderung zu einer Stehgreiferzählung ihrer Lebensgeschichte angeregt. Dabei intervenieren Forschende nicht, *»bringen lediglich gesprächsaufrechterhaltene Rezeptionssignale (bspw. mhm) ein«*
+## Biografisch-narrative Interviews
+* Geringer Grad an Fremdstrukturierung [@merk2024]
+* Biograf:innen werden mittels einer sehr offenen und allgemeinen Erzählaufforderung zu einer Stehgreiferzählung ihrer Lebensgeschichte angeregt. Dabei intervenieren Forschende nicht, *»bringen lediglich gesprächsaufrechterhaltene Rezeptionssignale (bspw. mhm) ein«*
 * Nach der Haupterzählung können sowohl immanente wie exmanente Nachfragen gestellt werden.
 
 ## Leitfadeninterviews
@@ -225,7 +225,7 @@ Typischerweise werden unterschieden:
 * Oft wird mit einem Diskussionsstimulus (These, Bild, Filmausschnitt) gearbeitet
 * Forschende Person leitet die Diskussion und hält den Diskurs aufrecht
 
-## Delphimethode [@haeder2000]
+## Delphimethode [@haeder2000] {.smaller}
 * Ursprünglich für die Vorhersage von Entwicklungen in Wissenschaft, Wirtschaft oder Politik entwickelt
 * Zunächst offene Frage an mehrere voneinander unabhängige Experten (z.B. »Wie muss sich Lehrer:innenbildung angesicht generativer KI ändern?«)
 * Kategorisierung von Antworten. Alle Expert:innen lesen alle Antworten
@@ -246,10 +246,15 @@ Typischerweise werden unterschieden:
 
 
 # Typische Auswertungsmethoden
+
 ## Typische Auswertungsmethoden {.smaller}
+:::{.callout-warning collapse=false appearance='default' icon=false}
+## Einigkeit über Uneinigkeit:
 Die Vielfalt qualitativer Auswertungsmethoden ist schier unüberschaubar und die meisten Autor:innen sind sich einig, dass wenig Einigkeit bzgl. deren Vor- und Nachteile sowie sogar der allgemein anzuwenden Gütekriterien herrscht [@struebing2018].
+:::
 
 Grob können die Auswertungsmethoden jedoch nach 
+
 * der angestrebt zu rekonstruierenden **Sinnebene** klassifiziert werden. Also in Rekonstruktionen
     * des subjektiven Sinns,
     * des sozialen Sinns und 
@@ -259,6 +264,7 @@ Grob können die Auswertungsmethoden jedoch nach
     * sequenzanalytische Verfahren
 
 ## Inhaltsanalyse {.smaller}
+::: {style="font-size: 0.8em;"}
 * Die Inhaltsanalyse ist ein klassisches und weit verbreitetes **kategorienbasiertes** qualitatives Datenanalyseverfahren
 * Ziel ist eine zusammenfassende inhaltliche Darstellung von textlichem Material (z.B. Interviewtranskipte)
 * Dazu werden Textstellen Kategorien zugeordnet
@@ -268,13 +274,22 @@ Grob können die Auswertungsmethoden jedoch nach
     * teilweise bereits vor der Datenerhebung gegeben sein aber während der Datenerhebung ergänzt werden (**deduktiv-induktive Inhaltsanalyse**)
 * Die verbreitetesten Verfahren sind die Inhaltsanalyse nach Mayring [@mayring2022] und Kuchartz [@kuckartz2022]
 * Diese Verfahren machen detaillierte Vorschläge zur praktischen Vorgehensweise
+:::
+
+:::{.callout-warning collapse=false appearance='default' icon=false}
+## Vielleicht interessant:
+In den seltenen Fällen, in denen empirisches Vorgehen im Rahmen der Qualifikationsarbeit Sinn macht, kommt bei einer Entscheidung zur qualitativen Methodik oftmals die qualitative Inhaltsanalyse zum Einsatz.
+:::
+
 
 ## Grounded Theory [@struebing2008] {.smaller}
+::: {style="font-size: 0.8em;"}
 * In der Grounded Theory findet **Datenerhebung, Datenauswertung und Theoriebildung reziprok und wiederholt** statt; jeder dieser Schritte kann also mehrfach durchgeführt werden und jedem der Schritt kann jeder andere folgen
 * Während der Analyse gesammelte theoretische Ideen werden der übder den gesamten Forschungsprozess als Memos festgehalten und dokumentieren so die sukzessive Theoretisierung. 
 * Für die Auswahl der nach einem Theoretisierungsschritt als nächstes zu erhebende Daten werden typischerweise **minimale oder maximale Kontrastierungen** gewählt
 * In der Grounded Theory werden verschiedene Kodiertechniken eingesetzt (das offene Kodieren, das axiale Kodieren und das selektive Kodieren)
 * Die Grouded Theory stellt für viele Autoren eine Paradebeispiel abduktiven Arbeitens ("empirisch begründete Theoriebildung") in den Sozialwissenschaften dar
+:::
 
 :::{.callout-warning collapse=false appearance='default' icon=false}
 ## Achtung:
@@ -283,7 +298,7 @@ Der Gesamtprozess ist so komplex, dass er sich nur in sehr seltenen Fällen für
 
 
 
-## Literatur {.smaller}
+## Literatur{.smaller}
 <style>
 div.callout {border-left-color: #8cd000 !important;
 </style>
